@@ -1,0 +1,186 @@
+.hotel-list-page {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hotel-list-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.hotel-list-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.hotel-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.hotel-list-count {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.btn-add-hotel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background-color: #4361ee;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-add-hotel:hover {
+  background-color: #3a56d4;
+}
+
+.hotel-list-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hotel-list-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #9ca3af;
+}
+
+.hotel-list-empty svg {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  color: #d1d5db;
+}
+
+.hotel-list-empty h3 {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+}
+
+.hotel-list-empty p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Delete confirmation modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.modal h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.modal p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-modal-cancel {
+  padding: 8px 20px;
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-modal-cancel:hover {
+  background: #e5e7eb;
+}
+
+.btn-modal-delete {
+  padding: 8px 20px;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-modal-delete:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 900px) {
+  .hotel-list-page {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .hotel-list-sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-list-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .btn-add-hotel {
+    justify-content: center;
+  }
+}
